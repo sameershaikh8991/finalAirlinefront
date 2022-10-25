@@ -1,0 +1,34 @@
+body{
+  background: #e8e8e4;
+}
+  
+  .form-box {
+    max-width: 500px;
+    margin: auto;
+    padding: 50px;
+    background: #ffffff;
+    border: 10px solid #f2f2f2;
+  }
+  
+  h1, p {
+    text-align: center;
+  }
+  
+  .border {
+    margin-top: 86px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+
+  input, textarea {
+    width: 100%;
+    background-color: #e9ecef;
+  }
+  
+  .btn-primary {
+    width: 300px;
+  }
+  label{
+    font-weight: bold;
+  }

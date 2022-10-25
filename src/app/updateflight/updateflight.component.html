@@ -1,0 +1,136 @@
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="offset-lg-2 col-lg-8 col-sm-8 col-8 border rounded main-section">
+                <h3 class="text-center text-inverse">Update Fligt details</h3>
+                <hr>
+                <form class="container" action="" method="post" ngNativeValidate>
+                    <input type="hidden" [(ngModel)]="getflightId" name="fid">
+                    <div class="row">
+                        <div class="col-lg-6 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label for="flightno">Flight No</label>
+                                <input class="form-control" type="text" name="flightNo" [(ngModel)]="flight.flightNo">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label for="source">From</label>
+                                <input class="form-control" type="text" name="source" [(ngModel)]="flight.source" pattern="^[a-zA-Z]$" title="only alphabet [a to z] " required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-6 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label for="destination">To</label>
+                                <input class="form-control" type="text" name="destination" id=""
+                                    [(ngModel)]="flight.destination" pattern="^[a-zA-Z]+$" title="only alphabet [a to z] " required>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label for="departuretime">departure date</label>
+                                <input class="form-control" type="datetime" name="departure_date" id=""  [(ngModel)]="flight.departure_date">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-6 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label for="arrivaltime">Arrivel date</label>
+                                <input class="form-control" type="date" name="arrival_date" id=""
+                                    [(ngModel)]="flight.arrival_date">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label for="duration">departure Time</label>
+                                <input class="form-control" type="time" name="departure_time" id=""
+                                    [(ngModel)]="flight.departure_time">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-6 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label for="arrivaltime">Arrivel Time</label>
+                                <input class="form-control" type="time" name="arrival_time" id=""
+                                    [(ngModel)]="flight.arrival_time">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label for="duration">duration</label>
+                                <input class="form-control" type="text" name="flight_duration" [(ngModel)]="flight.flight_duration" pattern="^[a-zA-Z]+$" title="only alphabet [a to z] " required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-6 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label for="ecomonySeat">no of seats in economy class</label>
+                                <input class="form-control" type="text" name="ecomonySeat" 
+                                    [(ngModel)]="flight.ecomonySeat" pattern="^(0|[1-9][0-9]*)$" title="only numbers "required>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label for="businessSeat">no of seats in business class</label>
+                                <input class="form-control" type="text" name="businessSeat" 
+                                    [(ngModel)]="flight.businessSeat" pattern="^(0|[1-9][0-9]*)$" title="only numbers " required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-6 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label for="duration">economy class price</label>
+                                <input class="form-control" type="text" name="duration"
+                                    [(ngModel)]="flight.ecomonyPrice" pattern="^(0|[1-9][0-9]*)$" title="only numbers " required>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label for="businessPrice">business class price</label>
+                                <input class="form-control" type="text" name="businessPrice"
+                                    [(ngModel)]="flight.businessPrice"  pattern="^(0|[1-9][0-9]*)$" title="only numbers " required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-6 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label for="businessPrice">available Seat</label>
+                                <input class="form-control" type="text" name="availableSeat" 
+                                    [(ngModel)]="flight.availableSeat"pattern="^(0|[1-9][0-9]*)$" title="only numbers " required>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-6 col-12">
+                            <div class="form-group">
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="row">
+                        <div class="col-lg-12 col-sm-12 col-12 text-center">
+                            <button type="submit" (click)="updateFlight(flight,getflightId)"
+                                class="btn btn-primary">update</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>

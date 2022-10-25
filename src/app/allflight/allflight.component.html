@@ -1,0 +1,48 @@
+
+    <div>
+      <h2>All Flight list</h2>
+    </div>
+  
+    <div class="container table-responsive py-9"> 
+      <table class="styled-table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Flight no</th>
+            <th scope="col">source</th>
+            <th scope="col">destination</th>
+            <th scope="col">departure date</th>
+            <th scope="col">arrival date</th>
+            <th scope="col">departure Time</th>
+            <th scope="col">arrival Time</th>
+            <th scope="col">flight duration (Hr)</th>
+            <th scope="col">ecomony Seat</th>
+            <th scope="col">business Seat</th>
+            <th scope="col">ecomony Price</th>
+            <th scope="col">business Price</th>
+            <th scope="col">capacity Seat</th>
+            <th scope="col">update</th>
+            <th>delete</th>
+  
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let f of flight">
+            <td>{{f.flightNo}}</td>
+            <td>{{f.source}}</td>
+            <td>{{f.destination}}</td>
+            <td>{{f.departure_date}}</td>
+            <td>{{f.arrival_date}}</td>
+            <td>{{f.departure_time}}</td>
+            <td>{{f.arrival_time}}</td>
+            <td>{{f.flight_duration}}</td>
+            <td>{{f.ecomonySeat}}</td>
+            <td>{{f.businessSeat}}</td>
+            <td>{{f.ecomonyPrice}}</td>
+            <td>{{f.businessPrice}}</td>
+            <td>{{f.availableSeat}}</td>
+            <td><a class="btn btn-primary" [routerLink]="['/update/',f.fid]">update</a></td>
+      <td><button class="btn btn-primary" (click)="deleteFlight(f.fid)">Delete</button></td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
